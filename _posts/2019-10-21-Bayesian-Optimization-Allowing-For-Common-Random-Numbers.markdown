@@ -33,7 +33,7 @@ So the next question naturally arises, in the final case pictured above, surely 
 ## The Model
 
 The standard approach to global optimisation, places a Gaussian process prior over the underlying average 
-$$\bar{\theta}(x)=\mathbb{E}[\theta(x,\cdot)]$$. It is fundamentally assumed that a distribution over funcitons is known and $$\bar{\theta}(x)$$ is one sample from this distribution. Then, given $$x$$, we assume $$y$$ values are the underlying function with added Gaussian noise $$ y = \bar{\theta}(x)+\epsilon $$, specifically $$\epsilon$$ is a Gaussian variable realisation.
+$$\bar{\theta}(x)=\mathbb{E}[\theta(x,\cdot)]$$ which we call the **target**. $$\bar{\theta}(x)$$ is one sample from a known distribution over functions. Then, given $$x$$, we assume $$y$$ values are the underlying function with added Gaussian noise $$ y = \bar{\theta}(x)+\epsilon $$, specifically $$\epsilon$$ is a Gaussian variable realisation.
 
 We augment the standard approach by considering a differnt form of noise $$ y = \bar{\theta}(x)+\epsilon_s(x)$$ where $$\epsilon_{s}(x)$$ is a Gaussian process realisation and we call them **difference functions** and $$\theta(x,s) = \bar{\theta}(x)+\epsilon_s(x)$$. These difference functions show how one seed differs from the average over seeds. Since there are (in theory) infintely have many possible seeds, there are many difference functions, and we require a distribution over difference functions, or, another Gaussian process. In general we model the underlying average (black) with one GP, and all differences (red, green) as coming from one common GP,
 
