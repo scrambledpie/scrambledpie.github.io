@@ -5,7 +5,7 @@ date:   2019-10-21 17:46:02 +0100
 categories: jekyll update
 ---
 
-The paper can be found [here][CRN_paper] and source code is soon to follow.
+The paper can be found [here][CRN_paper] and source code is soon to follow. This is joint work with Matthias Poloczek from Uber AI and Arizona University, and Juergen Branke of Warwick business school.
 
 We consider the global optimisation of an expensive function with stochastic noisy outputs $$\theta(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ max_x\mathbb{E}[\theta(x)]$$.
 
