@@ -4,26 +4,18 @@ title:  "Bayesian Optimization Allowing for Common Random Numbers"
 date:   2019-10-21 17:46:02 +0100
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+The paper is [here][CRN_paper] and source code is soon to follow.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+We consider the global optimisation of an expensive function with stochastic noisy outputs $$f(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ max_x\mathbb{E}[f(x)]$$. 
 
-Where `YEAR` is a for-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+In reality, the stochastic black box $$f(x)$$ is often a computer program e.g. a neural network, a simulator, or an agent in an environment. The stochasticity comes from random number generation within the function. So we may make this explicit $$ f(x,s) $$ where $$s$$ is the random number generator seed that controls all stochasticity inside the function. As a result, $$f(x,s)$$ for a given seed is now a deterministic function! 
 
-Jekyll also offers powerful support for code snippets:
+If we enforce that every call to the funciton requires a new unique seed we are back to standard global optimisation.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Instead, we can optimise seed 1 and learn $$ max_x f(x,1)$$ which is much easier than optmising $$ max_x\mathbb{E}[f(x,\cdot)]$$. Of course the optimum of one seed is not the optimum of the average over seeds so we need to a Bayesian optimisation algortihm that can trade off optimising one seed and optimizing many seeds.
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+
+[CRN_paper]: https://jekyllrb.com/docs/home
+[CRN_git]:   https://github.com/jekyll/jekyll
