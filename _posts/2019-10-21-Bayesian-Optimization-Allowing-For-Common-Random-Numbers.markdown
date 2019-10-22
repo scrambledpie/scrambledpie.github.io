@@ -18,17 +18,19 @@ In reality, the stochastic black box $$\theta(x)$$ is often a computer program e
 
 ![image-title-here](/Pics/CRN/CRN-IID.jpg){:class="img-responsive"}
 
-The question naturally arises, what would happen if we call the objective function with only 5 seeds, for example we may get data that looks the same as before
+The question naturally arises, what would happen if we call the objective function with only 5 seeds. For example, there may be an objective function that produces data that looks the same as before
 
 ![image-title-here](/Pics/CRN/CRN-no-cor.jpg){:class="img-responsive"}
 
-Instead we may get data that looks like each seed has a little big of structure,
+Other objective functions may produce data that looks like each seed has some structure,
 ![image-title-here](/Pics/CRN/CRN-ideal.jpg){:class="img-responsive"}
 
-Or in the best possible case, we get data where a single seed is exactly the same as the average, just with a constant offset
+Or in the best possible case, some applications may produce data where a single seed is exactly the same as the average only with a constant offset
 ![image-title-here](/Pics/CRN/CRN-full_corr.jpg){:class="img-responsive"}
 
-So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). Optimising the red funciton above is much easier than optimising the black function at the very beginnig of the post! 
+So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). If they Optimising the deterministic red funciton above is much easier than optimising the stochastic black function at the very begining of the post!
+
+The standard approach to global optimisation, places a Gaussian process prior over the underlying average $$\bar{\theta}(x)=\mathbb{E}[\theta(x,\cdot)]$$
 
 The **difference functions** $$ \epsilon_s(x) = \theta(x,s)- \mathbb{E}[\theta(x,\cdot)]$$ show how one seed differs from the avergae over seeds. Since there are (in theory) infintely have many possible seeds, there are many difference functions, and we require a distribution over difference functions, or, another Gaussian process.
 
