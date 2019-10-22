@@ -28,7 +28,7 @@ Other objective functions may produce data that looks like each seed has some st
 Or in the best possible case, some applications may produce data where a single seed is exactly the same as the average only with a constant offset
 ![image-title-here](/Pics/CRN/CRN-full_corr.jpg){:class="img-responsive"}
 
-So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). If they Optimising the deterministic red funciton above is much easier than optimising the stochastic black function at the very begining of the post!
+So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). If they Optimising the deterministic red function above is much easier than optimising the stochastic black function at the very begining of the post! In other words, fixing the seed leads to **emergent structure in the noise** of a function that can be exploited if it exists.
 
 ## The Model
 
@@ -58,9 +58,8 @@ The second application we consider is optimising ambulance base locations on a m
 ![image-title-here](/Pics/CRN/AMB.png){:class="img-responsive"}
 
 
+Compared to KG for global optmisation, the CRNN-KG algorithm has approximltely 10%-30% more computational overhead, two more Gaussian process hyperparameters and similar acquisition funciton optimisation cost yet much improved convergence. For more detailse see the [paper][CRN_paper]!
 
 
-
-
-[CRN_paper]: https://jekyllrb.com/docs/home
+[CRN_paper]: https://arxiv.org/abs/1910.09259
 [CRN_git]:   https://github.com/jekyll/jekyll
