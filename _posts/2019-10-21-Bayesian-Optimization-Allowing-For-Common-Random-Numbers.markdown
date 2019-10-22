@@ -49,7 +49,7 @@ Or in the best possible case, some applications may produce data where a single 
 
 <span style="color: white">1<span style="color: white">
 
-So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). If they Optimising the deterministic red function above is much easier than optimising the stochastic black function at the very begining of the post! In other words, fixing the seed leads to **emergent structure in the noise** of a function that can be exploited if it exists.
+So the second question naturally arises, in the final case pictured above, surely it is possible to optimise $$\theta(x,1)$$ (red) and find $$ argmax_x \theta(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[\theta(x,\cdot)]$$ (grey). Presumably, optimising the **deterministic** red function above is much easier than optimising the **stochastic** black function at the very begining of the post! In other words, fixing the seed leads to **emergent structure in the noise** of a function that can be exploited if it exists. This is commonly known as optimisation with common random numbers.
 
 ## The Model
 
