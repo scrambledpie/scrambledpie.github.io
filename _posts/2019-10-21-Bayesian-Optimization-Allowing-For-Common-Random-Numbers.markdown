@@ -58,7 +58,7 @@ The second application we consider is optimising ambulance base locations on a m
 ![image-title-here](/Pics/CRN/AMB.png){:class="img-responsive"}
 
 
-Compared to KG for global optmisation, the CRNN-KG algorithm has approximltely 10%-30% more computational overhead, two more Gaussian process hyperparameters and similar acquisition funciton optimisation cost yet much improved convergence. For more detailse see the [paper][CRN_paper]!
+Compared to KG for standard global optmisation, the CRN-KG algorithm has approximltely 10%-30% more computational overhead, two more Gaussian process hyperparameters and similar acquisition funciton optimisation cost yet much improved convergence. For more detailse see the [paper][CRN_paper]!
 
 
 [CRN_paper]: https://arxiv.org/abs/1910.09259
