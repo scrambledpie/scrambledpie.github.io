@@ -7,13 +7,30 @@ categories: jekyll update
 
 The paper is [here][CRN_paper] and source code is soon to follow.
 
-We consider the global optimisation of an expensive function with stochastic noisy outputs $$f(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ max_x\mathbb{E}[f(x)]$$. 
+We consider the global optimisation of an expensive function with stochastic noisy outputs $$\theta(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ max_x\mathbb{E}[f(x)]$$.
 
-In reality, the stochastic black box $$f(x)$$ is often a computer program e.g. a neural network, a simulator, or an agent in an environment. The stochasticity comes from random number generation within the function. So we may make this explicit $$ f(x,s) $$ where $$s$$ is the random number generator seed that controls all stochasticity inside the function. As a result, $$f(x,s)$$ for a given seed is now a deterministic function! 
+For example, an algorithm collects data $$(x,y)$$ (in black) and predicts the average $$\mathbb{E}[f(x)]$$ (grey),
 
-If we enforce that every call to the funciton requires a new unique seed we are back to standard global optimisation.
 
-Instead, we can optimise seed 1 and learn $$ max_x f(x,1)$$ which is much easier than optmising $$ max_x\mathbb{E}[f(x,\cdot)]$$. Of course the optimum of one seed is not the optimum of the average over seeds so we need to a Bayesian optimisation algortihm that can trade off optimising one seed and optimizing many seeds.
+![image-title-here](/Pics/CRN/not-CRN.png){:class="img-responsive"}
+
+In reality, the stochastic black box $$f(x)$$ is often a computer program e.g. a neural network, a simulator, or an agent in an environment. The stochasticity comes from random number generation within the function. So we may make this explicit $$ f(x,s) $$ where $$s$$ is the random number generator seed that controls all stochasticity inside the function. Therefore the data collected was actually $$(x,s,y)$$ triplets where $$s$$ was unique. Coloring data points by seed used we would get 
+
+![image-title-here](/Pics/CRN/CRN-IID.png){:class="img-responsive"}
+
+The question naturally arises, what would happen if we call the objective function with only 5 seeds, for example we may get data that looks the same as before
+
+![image-title-here](/Pics/CRN/CRN-no-cor.png){:class="img-responsive"}
+
+Instead we may get data that looks like each seed has a little big of structure,
+![image-title-here](/Pics/CRN/CRN-ideal.png){:class="img-responsive"}
+
+Or in the best possible case, we get data where a single seed is exactly the same as the average, just with a constant offset
+![image-title-here](/Pics/CRN/CRN-full_corr.png){:class="img-responsive"}
+
+So the next question naturally arises, in the final case pictured above, surely it is possible to optimise $$f(x,1)$$ (red) and find $$ argmax_x f(x,1) $$ since this is the same as $$ argmax_x\mathbb{E}[f(x,\cdot)]$$ (grey). Optimising the red funciton above is much easier than optimising the black function at the very beginnig of the post! 
+
+The **difference functions** $$ \epsilon_s(x) = f(x,s)- \mathbb{E}[f(x,\cdot)]$$ show how one seed differs from the avergae over seeds, and since we have many seeds 
 
 
 
