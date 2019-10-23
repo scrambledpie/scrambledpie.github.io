@@ -7,7 +7,7 @@ categories: jekyll update
 
 The paper can be found [here][CRN_paper] and source code is soon to follow. This is joint work with [Matthias Poloczek][MatPol_link] from Uber AI and Arizona University, and [Juergen Branke][JB_website] of Warwick Business School.
 
-Optimisation with common random numbers has been well studied in the simulation optimisation community in the context of ranking and selection of solutions (R&S). R&S is a problem setting, similar to a multi-armed bandit, where a user aims to find the single best solution (arm) at the end of sampling (instead of maximising cumulative reward). However, CRN has not been widely used in the context of Bayesian Optimisation (BO) with Gaussian process models in continuous search spaces.
+Optimisation with common random numbers has been much studied in the simulation optimisation community in the context of ranking and selection of solutions (R&S). R&S is a problem setting, similar to a multi-armed bandit, where a user aims to find the single best solution (arm) at the end of sampling (instead of maximising cumulative reward). However, CRN has not been widely used in the context of Bayesian Optimisation (BO) with Gaussian process models in continuous search spaces.
 
 We consider the global optimisation of an expensive function with stochastic noisy outputs $$\theta(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ \max_x\mathbb{E}[\theta(x)]$$. We augment this classic BO problem setting with CRN proposing a new GP model and acquisition procedure that combine to make the **Knowledge Gradient for Common Random Numbers** algorithm.
 
