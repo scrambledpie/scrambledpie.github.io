@@ -11,7 +11,7 @@ My brilliant supervisor is/was [Juergen Branke][JB_website] in Warwick Business 
 in September 2019, I submitted my PhD thesis titled "Bayesian Optimisation with Mutli-Task Gaussian Processes".
 
 My PhD is mostly on extentions of Gaussian process model based optimisation to applications beyond global optmisation. 
-I also spent some time working in Warwick Medical School on Bayesian-Frequentist methods for clinical trials, I did and internship at Google Deepmind working on combining graphical models and variational autoencoders and most recently at Uber AI focusing on large scale Bayesian optimisation and optimisation of combinatorial domains.
+I also spent some time working in Warwick Medical School on Bayesian-Frequentist methods for clinical trials, I did an internship at Google Deepmind combining graphical models and variational autoencoders and most recently at Uber AI focusing on large scale Bayesian optimisation and optimisation over combinatorial domains.
 
 Gmail: scrambledpie
 
