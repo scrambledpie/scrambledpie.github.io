@@ -74,7 +74,7 @@ The Knowledge Gradient (KG) acquisition function is a noise generalised bigger b
 The model and acquisition function together define the **Knowledge Gradient for Common Random Numbers** (CRN-KG) algorithm.
 
 ## Experiments
-We compare against the standard Knowledge Gradient (all $$(x,y)$$ pairs have a unique seed) and the Knowledge Gradient with pairwise sampling designed for the same BO with CRN setting. We apply the algorithm to two simulation optimisation problems, optimising shop restocking levels where the random number seed defines a stream of customers. The goal is to maximise profit, of all algortihm variants, CRN-KG results in fewer seeds being used, and fewer function calls to convergence. Optimizing one single realisation of customer stream leads to a very good optimum of the average over many random customer streams $$\bar{\theta}(x)$$.
+We compare against the standard Knowledge Gradient (all $$(x,y)$$ pairs have a unique seed) and the Knowledge Gradient with pairwise sampling designed for the same BO with CRN setting. We apply the algorithm to two simulation optimisation problems, optimising shop restocking levels where the random number seed defines a stream of customers. The goal is to maximise profit, of all algortihm variants, CRN-KG results in fewer seeds being used, and fewer function calls to convergence. Optimising one single realisation of customer stream leads to a very good optimum of the average over many random customer streams $$\bar{\theta}(x)$$.
 
 <span style="color: white">.<span style="color: white">
 ![image-title-here](/Pics/CRN/ATO.png){:class="img-responsive"}
@@ -83,7 +83,7 @@ We compare against the standard Knowledge Gradient (all $$(x,y)$$ pairs have a u
 The seed reuse shows how frequently a seed sampled at a given iteration, $$s^n$$, was in the history of seeds sampled before that iteration $$\{ s^1,...,s^{n-1}\}$$. A seed reuse of 1 at iteration $$n$$ means that averaged of repeated runs, for that iteration an algorithm always went back to an an old seed. The CRN-KG variants never sample a new seed after the initial 5 seeds in this application.
 
 
-The second application we consider is optimising ambulance base locations on a map to serve patients where the random number seed defines a stream of patients across the map. Contrasting with the previous application, optimizing one particular patient realisation does not help optimise the infinite average over seeds,
+The second application we consider is optimising ambulance base locations on a map to serve patients where the random number seed defines a stream of patients across the map. Contrasting with the previous application, optimising one particular patient realisation does not help optimise the infinite average over seeds,
 
 <span style="color: white">.<span style="color: white">
 ![image-title-here](/Pics/CRN/AMB.png){:class="img-responsive"}
