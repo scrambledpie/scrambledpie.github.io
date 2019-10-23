@@ -9,9 +9,9 @@ The paper can be found [here][CRN_paper] and source code is soon to follow. This
 
 Optimisation with common random numbers has been well studied in the simulation optimisation community in the context of ranking and selection of solutions (R&S). R&S is a problem setting, similar to a multi-armed bandit, where a user aims to find the single best solution (arm) at the end of sampling (instead of maximising cumulative reward). However, CRN has not been widely used in the context of Bayesian Optimisation (BO) with Gaussian process models in continuous search spaces.
 
-We consider the global optimisation of an expensive function with stochastic noisy outputs $$\theta(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ \max_x\mathbb{E}[\theta(x)]$$. We augment this classical problem setting with CRN and propose a GP model and an acquisition procedure that combine to make the **Knowledge Gradient for Common Random Numbers** algorithm.
+We consider the global optimisation of an expensive function with stochastic noisy outputs $$\theta(x)$$ over a search space $$ x \in X $$. The goal is to find the input $$x$$ that has the best output on average $$ \max_x\mathbb{E}[\theta(x)]$$. We augment this classical problem setting with CRN and requiring a new GP model and acquisition procedure that combine to make the **Knowledge Gradient for Common Random Numbers** algorithm.
 
-We start by describing the perspective of CRN we take. In the classical non-CRN setting, an optimisation algorithm collects data $$(x,y)$$ (in black) and predicts the average $$\mathbb{E}[\theta(x)]$$ (grey),
+We start by describing the perspective of CRN we take. In the classical non-CRN setting, an optimisation algorithm collects data $$(x,y)$$ (in black) and predicts the average $$\mathbb{E}[\theta(x)]$$ (grey);
 
 <span style="color: white">.<span style="color: white">
 
