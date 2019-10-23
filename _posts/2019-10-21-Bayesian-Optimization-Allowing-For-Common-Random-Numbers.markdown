@@ -75,7 +75,7 @@ $$ \bar{\theta}(x) $$ and find its peak. Knowledge Gradient is easily adapted to
 The model and acquisition function together define the **Knowledge Gradient for Common Random Numbers** (CRN-KG) algorithm.
 
 ## Experiments
-We compare against the standard Knowledge Gradient (all $$(x,y)$$ pairs have a unique seed) and the Knowledge Gradient with pairwise sampling designed for the same BO with CRN setting. We apply the algorithm to two simulation optimisation problems, optimising shop restocking levels where the random number seed defines a stream of customers. The goal is to maximise profit, of all algortihm variants, KG-CRN results in fewer seeds being used, and fewer function calls to convergence. Optimizing one single realisation of customer stream leads to a very good optimum of the average over many random customer streams $$\bar{\theta}(x)$$.
+We compare against the standard Knowledge Gradient (all $$(x,y)$$ pairs have a unique seed) and the Knowledge Gradient with pairwise sampling designed for the same BO with CRN setting. We apply the algorithm to two simulation optimisation problems, optimising shop restocking levels where the random number seed defines a stream of customers. The goal is to maximise profit, of all algortihm variants, CRN-KG results in fewer seeds being used, and fewer function calls to convergence. Optimizing one single realisation of customer stream leads to a very good optimum of the average over many random customer streams $$\bar{\theta}(x)$$.
 
 <span style="color: white">.<span style="color: white">
 ![image-title-here](/Pics/CRN/ATO.png){:class="img-responsive"}
