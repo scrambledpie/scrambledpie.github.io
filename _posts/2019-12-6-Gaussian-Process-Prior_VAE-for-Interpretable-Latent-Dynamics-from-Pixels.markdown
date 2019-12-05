@@ -63,7 +63,7 @@ As a simple naive Baseline, we also trained a VAE without and correlation throug
 
 If we consider a fixed pattern of images, and ask the encoder for an $$(x,y)$$ position in latent space, one would hope that a set of frames where the ball movies smoothly from one side of the screen to another would lead to a continuous set of latent points. However, this continuity from pixels to latents is not preserved by a standrard VAE, but is preserved by the GP-VAE.
 <p align="center">
-  <img width="460" height="658" src="/Pics/GPVAE/circ_grid.png">
+  <img width="460" height="322" src="/Pics/GPVAE/circ_grid.png">
 </p>
 
 Here we present some simple proof-of-concept results and, on this toy application at least, training is easy, yields an interpretable latent space that maps directly to pixel space. Next steps are to use the model on real data and reduce the cubic cost of GP inference for really long time series and evenetually augment an RL agent with the ability to predict physcially plausible latent states with uncertainty from visual input.
