@@ -27,8 +27,8 @@ In this work we consider doing just that, however with a few extra requirements:
 
 * It must be able to handle different length videos: 2 frames, 10 frames, 100 frames, videos vary in length.
 
-Previous solutions, such as the Kalman-VAE, have combined high-capacity LSTM with low capacity Kalman-filtering. This allowed interpretable physically plausible latent space but required training tricks: reweighting loss function terms, freeze-thaw of parameters, a handcrafted training schedule. 
-We consider an approach without the Kalman filter or the notoriously temperamental LSTM instead opting for a Gaussian process. This simplifies the maths, reduces Monte-Carlo approximations, stabilises training...
+Previous solutions, such as the Kalman-VAE, have combined high-capacity LSTM with low capacity Kalman-filtering. This allowed interpretable physically plausible latent space but required training tricks: reweighting loss function terms, freeze-thaw of parameters, a handcrafted training schedule....
+We skip the Kalman filter + LSTM and consider a Gaussian process. This simplifies the maths, reduces Monte-Carlo approximations, stabilises training...
 
 
 ## The Solution
@@ -61,9 +61,14 @@ As a simple naive Baseline, we also trained a VAE without and correlation throug
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
-This is some simple proof-of-concept work, there are a few more steps on the road to being able to use such a model on real data, reducing the cubic cost of GP inference, dealing with model mismatch.z
+If we consider a fixed pattern of images, and ask the encoder for an $$(x,y)$$ position in latent space, one would hope that a set of frames where the ball movies smoothly from one side of the screen to another would lead to a continuous set of latent points. However, this continuity from pixels to latents is not preserved by a standrard VAE, but is preserved by the GP-VAE.
+<p align="center">
+  <img width="460" height="658" src="/Pics/GPVAE/circ_grid.png">
+</p>
 
-Feel free to get in touch! scrambledpie@gmail.com
+Here we present some simple proof-of-concept results and, on this toy application at least, training is easy, yields an interpretable latent space that maps directly to pixel space. Next steps are to use the model on real data and reduce the cubic cost of GP inference for really long time series and evenetually augment an RL agent with the ability to predict physcially plausible latent states with uncertainty from visual input.
+
+Feel free to play with the code and get in touch! scrambledpie@gmail.com
 
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
