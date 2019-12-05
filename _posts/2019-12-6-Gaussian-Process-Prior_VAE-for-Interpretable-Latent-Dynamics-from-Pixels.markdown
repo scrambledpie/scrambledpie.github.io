@@ -60,7 +60,7 @@ As a simple naive Baseline, we also trained a VAE without and corellation throug
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
-This is some simple proof-of-concept work, there are a few more steps on the road to being able to use such a model on real data, reducing the cubic cost of GP inference, 
+This is some simple proof-of-concept work, there are a few more steps on the road to being able to use such a model on real data, reducing the cubic cost of GP inference, dealing with model mismatch.
 
 Feel free to get in touch! scrambledpie@gmail.com
 
