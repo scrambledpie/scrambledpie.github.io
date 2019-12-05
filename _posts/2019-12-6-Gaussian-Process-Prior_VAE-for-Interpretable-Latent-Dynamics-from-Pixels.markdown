@@ -44,7 +44,7 @@ And the Gaussian process for each coordinate looks like
 </p>
 
 
-Fianlly, we derive the evidence lower bound and train in tensorflow shown below. Notice how to begin with, the encoded (x,y) points are rather tangled and messy, but, they get "unwrapped" and ironed out as training continues, focus on the top-right points of the circle plot,
+Finally, we derive the evidence lower bound and train in tensorflow shown below. Notice how to begin with, the encoded (x,y) points are rather tangled and messy, but, they get "unwrapped" and ironed out as training continues, focus on the top-right points of the circle plot,
 
 <p align="center">
 <iframe width="650" height="600" src="https://www.youtube.com/embed/riVhb6K_iMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
