@@ -5,6 +5,8 @@ date:   2019-11-6 17:46:02 +0100
 categories: jekyll update
 ---
 
+Source code is available [here][GPVAE_git] and the paper is soon to follow.
+
 ## The Problem
 
 Given a set of videos that looks like this:
@@ -56,6 +58,6 @@ As a simple Naive Baseline, we also trained a VAE without and corellation throug
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
-Source code is available [here][GPVAE_git] and the paper is soon to follow.
+
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
