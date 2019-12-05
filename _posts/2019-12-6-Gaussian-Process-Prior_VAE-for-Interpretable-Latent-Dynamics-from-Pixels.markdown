@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Gaussian Process Prior VAE for Interpretable Layent Dynamics from Pixels"
-date:   2019-11-6 17:46:02 +0100
+date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
 ---
 
-Source code is available [here][GPVAE_git] and the paper is soon to follow.
+Source code is available [here][GPVAE_git] and the paper [here][GP_VAE_paper].
 
 ## The Problem
 
@@ -61,3 +61,4 @@ As a simple Naive Baseline, we also trained a VAE without and corellation throug
 
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
+[GP_VAE_paper]:/Pics/GPVAE/AABI2019(10).pdf
