@@ -28,7 +28,7 @@ In this work we consider doing just that, however with a few extra requirements:
 * It must be able to handle different length videos: 2 frames, 10 frames, 100 frames, videos vary in length.
 
 Previous solutions, such as the Kalman-VAE, have combined high-capacity LSTM with low capacity Kalman-filtering. This allowed interpretable physically plausible latent space but required training tricks: reweighting loss function terms, freeze-thaw of parameters, a handcrafted training schedule. 
-We consider an approach without the Kalman filter or the notoriously temperamental LSTM instead opting for a Gaussian process. This simplies the maths, reduces Monte-Carlo approximations, stabilising training...
+We consider an approach without the Kalman filter or the notoriously temperamental LSTM instead opting for a Gaussian process. This simplifies the maths, reduces Monte-Carlo approximations, stabilises training...
 
 
 ## The Solution
