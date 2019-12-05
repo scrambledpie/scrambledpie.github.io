@@ -27,6 +27,8 @@ In this work we consider doing just that, however with a few extra requirements:
 
 * It must be able to handle different length videos: 2 frames, 10 frames, 100 frames, videos vary in length.
 
+Previous solutions, such as the Kalman-VAE, have combined high-capacity LSTM with low capacity Kalman-filtering. This allowed interpretable physically plausible latent space but was brittle to train and required training tricks: reweighting loss function terms, freeze-thaw of parameters. In an attempt to make life a bit easier, we instead replace the low capacity Kalman filter with a slightly more flexible GP and remove the LSTM. As a result this model (on toy data at least) can be trained very quickly and easily!
+
 
 ## The Solution
 
@@ -57,6 +59,8 @@ As a simple naive Baseline, we also trained a VAE without and corellation throug
 <p align="center">
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
+
+This is some simple proof-of-concept work, there are a few more steps on the road to being able to use such a model on real data, reducing the cubic cost of GP inference, 
 
 Feel free to get in touch! scrambledpie@gmail.com
 
