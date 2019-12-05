@@ -58,6 +58,7 @@ As a simple naive Baseline, we also trained a VAE without and corellation throug
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
+Feel free to get in touch! scrambledpie@gmail.com
 
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
