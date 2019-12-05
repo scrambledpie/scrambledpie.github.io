@@ -55,7 +55,7 @@ Finally, we derive the evidence lower bound and train in tensorflow shown below.
 
 
 
-As a simple naive Baseline, we also trained a VAE without and corellation through time, the images are encoded in an i.i.d. fashion, as a result the latent space is rather messy and discontinuous, the top row is input video, middle row is VAE encoded latent $$(x,y)$$ and the bottom row is the GP-VAE encoded $$(x,y)$$
+As a simple naive Baseline, we also trained a VAE without and correlation through time, the images are encoded in an i.i.d. fashion, as a result the latent space is rather messy and discontinuous, the top row is input video, middle row is VAE encoded latent $$(x,y)$$ and the bottom row is the GP-VAE encoded $$(x,y)$$
 
 <p align="center">
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
