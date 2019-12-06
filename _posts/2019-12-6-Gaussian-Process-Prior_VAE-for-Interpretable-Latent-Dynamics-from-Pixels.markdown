@@ -63,7 +63,7 @@ As a simple naive Baseline, we also trained a VAE without any correlation throug
   <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
-If we consider a fixed pattern of images, and ask the encoder for an $$(x,y)$$ position in latent space, one would hope that a set of frames where the ball movies smoothly from one side of the screen to another would lead to a continuous set of latent points. However, this continuity from pixels to latents is not preserved by a standrard VAE, but is preserved by the GP-VAE. Int the plots below, the lines are only there for visual clarity, this is simply the encoded $$(\mu^*x(v_t), \mu^*x(v_t))$$ points (no GP regression/prediction over time).
+If we consider a fixed pattern of images, and ask the encoder for an $$(x,y)$$ position in latent space, one would hope that a set of frames where the ball movies smoothly from one side of the screen to another would lead to a continuous set of latent points. However, this continuity from pixels to latents is not preserved by a standrard VAE, but is preserved by the GP-VAE. In the plots below, the lines are only there for visual clarity, we made a specific set of frames and plot the encoded $$(\mu^*x(v_t), \mu^*x(v_t))$$ points (no GP regression/prediction over time).
 <p align="center">
   <img width="460" height="322" src="/Pics/GPVAE/circ_grid.png">
 </p>
