@@ -25,7 +25,7 @@ In this work we consider doing just that, however with a few extra requirements:
 
 * For any frame, we could obviously just use indeces of the most top left white pixel as a prediction of $$(x,y)$$ location. But such a solution is unique to this dataset and won't generalise to colorful real world video (future work).
 
-* For speed at test time, it must be amortised: we want a method that goes from videos, image time series $$v_{1:T}$$, to location time series, $$(x_1,y_1),...,(x_T, y_T)$$. (As opposed to mean-field methods that find $$(x_t,y_t)$$ by an inner optimisation to match $$v_t$$).
+* For speed at test time, it must be amortised: we desire a single function that goes from videos, image time series $$v_{1:T}$$, to location time series, $$(x_1,y_1),...,(x_T, y_T)$$. (As opposed to mean-field methods that find $$(x_t,y_t)$$ by an inner optimisation to match $$v_t$$).
 
 * It must be able to handle different length videos: 2 frames, 10 frames, 100 frames, videos vary in length.
 
