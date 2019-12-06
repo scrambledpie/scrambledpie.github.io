@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Gaussian Process Prior VAE for Interpretable Layent Dynamics from Pixels"
+title:  "Gaussian Process Prior VAE for Interpretable Latent Dynamics from Pixels"
 date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
 ---
