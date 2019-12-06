@@ -5,7 +5,9 @@ date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
 ---
 
-Source code is available [here][GPVAE_git], the paper [here][GP_VAE_paper] and the poster to be presented at AABI 2019 is [here][AABI_poster].
+* Source code is available [here][GPVAE_git], 
+* The paper [here][GP_VAE_paper]
+* The poster to be presented at [AABI 2019][AABI_link] is [here][AABI_poster].
 
 ## The Problem
 
@@ -72,5 +74,6 @@ Feel free to play with the code and get in touch! scrambledpie@gmail.com
 
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
-[GP_VAE_paper]:/Pics/GPVAE/AABI2019(10).pdf
+[GP_VAE_paper]:/Pics/GPVAE/AABI2019_paper.pdf
 [AABI_poster]:/Pics/GPVAE/AABI2019_poster.pdf
+[AABI_link]:http://approximateinference.org/
