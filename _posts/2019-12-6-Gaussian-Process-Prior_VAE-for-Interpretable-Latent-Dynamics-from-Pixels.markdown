@@ -18,14 +18,14 @@ Given a set of videos that looks like this:
 </p>
 
 
-we know that the images have low-dimensional structure, in this case there is only so many white pixels on screen at once, and there is also a lot of similarity between consecutive frames.
-Can we use this simple underlying structure and correlation-through-time to compress these videos into a series of physically plausible $$(x,y)$$ coordinates?
+we know that the videos have low-dimensional structure, in this case there is only so many white pixels on screen at once, and there is also a lot of similarity between consecutive frames.
+Can we use this simple underlying structure and correlation-through-time to learn a physically plausible time series of $$(x,y)$$ coordinates?
 
 In this work we consider doing just that, however with a few extra requirements:
 
 * For any frame, we could obviously just use indeces of the most top left white pixel as a prediction of $$(x,y)$$ location. But such a solution is unique to this dataset and won't generalise to colorful real world video (future work).
 
-* It must be amortised: we want a method that goes from videos $$v_1,...,v_T$$ to $$(x_1,y_1),...,(x_T, y_T)$$. (As opposed to mean-field methods that try to find $$(x_t,y_t)$$ by some optimisation to match $$v_t$$).
+* For speed at test time, it must be amortised: we want a method that goes from videos, image time series $$v_{1:T}$$, to location time series, $$(x_1,y_1),...,(x_T, y_T)$$. (As opposed to mean-field methods that find $$(x_t,y_t)$$ by an inner optimisation to match $$v_t$$).
 
 * It must be able to handle different length videos: 2 frames, 10 frames, 100 frames, videos vary in length.
 
