@@ -13,6 +13,8 @@ in September 2019, I submitted my PhD thesis titled "Bayesian Optimisation with 
 My PhD is mostly on extentions of Gaussian process model based optimisation to applications beyond global optmisation. 
 I also spent some time working in Warwick Medical School on Bayesian-Frequentist methods for clinical trials, I did an internship at Google Deepmind combining graphical models and variational autoencoders and most recently at Uber AI focusing on large scale Bayesian optimisation and optimisation over combinatorial domains.
 
+Download my thesis [here][MP_thesis]
+
 Gmail: scrambledpie
 
 Warwick University:[here][MP_warwick]
@@ -35,3 +37,4 @@ Twitter: [here][MP_twitter]
 [MP_github]: https://github.com/scrambledpie
 [MP_warwick]:https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/pearce/
 [MP_twitter]: https://twitter.com/MichaelLeopoldP
+[MP_thesis]:/Pics/thesis(1).pdf
