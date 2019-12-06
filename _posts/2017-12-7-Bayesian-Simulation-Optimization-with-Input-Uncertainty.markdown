@@ -56,6 +56,6 @@ On the left we set $$\mathbb{P}[a] = Uniform(0,100)$$ and red is the standard EI
 <!-- In general, fiven a function of two variables, $$ \nabla_\boldsymbol{x} J(\boldsymbol{x}) $$ -->
 
 
-[IU_paper]:Pics/IU/pearce2017(1).pdf
+[IU_paper]:/Pics/IU/pearce2017(1).pdf
 [IU_source]:https://github.com/scrambledpie/InputUncertainty
 [IU_slides]:https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/pearce/inputuncertatinty_pressy.pptx
