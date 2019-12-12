@@ -35,9 +35,9 @@ We skip the Kalman filter + LSTM and consider a Gaussian process. This simplifie
 
 ## The Solution
 
-Let's assume that the underlying $$(x,y)$$ time series can be modelled by a standard Gaussian process. For simlpicity, le't say we have 30 frames, we can take each frame, $$v_1,...,v_{30}$$, use a neural network to encode it into a pair $$(\mu^*_x(v_t), \mu^*_y(v_t))\in\mathbb{R}^2$$.
+Let's assume that the underlying $$(x,y)$$ time series can be modelled by a standard Gaussian process. For simlpicity, let's say we have 30 frames, we can take each frame, $$v_1,...,v_{30}$$, use a neural network to encode it into a pair $$(\mu^*_x(v_t), \mu^*_y(v_t))\in\mathbb{R}^2$$.
 
-Next, take all of the $$x$$ values of the encodings and their time stamps $$(1,\mu_x^*(v_1)),....,(30, \mu_x^*(v_{30}))$$, and simply treat them as points for standard 1D Gaussian process regression over time. This way we get a prediction for $$x_t$$ at any time. We do the same for the $$y$$ values too. We take a video (left) and fit a GP to the encoded $$x$$ locations and encoded $$y$$ locations, so we can learn latent paths. Below left is a video with frames overlayed and shaded by time, right is the GP encoded time series.
+Next, take all of the $$x$$ values of the encodings and their time stamps $$(1,\mu_x^*(v_1)),....,(30, \mu_x^*(v_{30}))$$, and simply treat them as points for standard 1D Gaussian process regression over time. This way we get a prediction with uncertainty $$x(t) \sim N( \mu_x(t), \sigma^2_x(t))$$ for any time that includes information from all frames. We do the same for the $$y$$ values too. Below left is a video with frames overlayed and shaded by time, right is the GP regression applied to the time series of encodings.
 
 <p align="center">
   <img width="600" height="300" src="/Pics/GPVAE/VID_latent.png">
