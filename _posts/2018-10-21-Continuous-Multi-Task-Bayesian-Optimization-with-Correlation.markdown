@@ -5,7 +5,8 @@ date:   2018-10-21 17:46:02 +0100
 categories: jekyll update
 ---
 
-See the paper [here][REVI_paper] and some toy source code in R [here][REVI_git].
+* See the paper [here][REVI_paper] and a newer rewritten version in Chapter 6 of my thesis [here][MP_thesis]
+* toy source code in R [here][REVI_git]
 
 Standard Bayesian optimisation deals with finding the best input $$ x \in X $$ to a stochastic noisy expensive black box function $$ f(x) $$. If I had, say, 10 expensive black box functions all over the same input domain $$ f_{1}(x),..., f_{10}(x) $$, surely I do not need to optimise all 10 independently? 
 
@@ -20,8 +21,7 @@ The horizontal axis is the task parameter $$ i $$, the depth/vertical axis the i
 The acquisition funciton, REVI, simply says, find the single green point that maximses the average height of all black points.
 
 
-
-
+[MP_thesis]:/Pics/thesis(1).pdf
 [REVI_git]: https://github.com/scrambledpie/Conditional-Multi-Task-BayesOpt
 [REVI_paper]: https://www.sciencedirect.com/science/article/abs/pii/S0377221718302261
 

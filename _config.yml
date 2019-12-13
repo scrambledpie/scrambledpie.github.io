@@ -23,7 +23,7 @@ email: scrambledpie@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My name is Michael Pearce, I love working with Gaussian processes and Bayesian optimisation!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://BayesianMP.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.BayesianBlog.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: MichaelLeopoldP
 github_username:  scrambledpie
 
