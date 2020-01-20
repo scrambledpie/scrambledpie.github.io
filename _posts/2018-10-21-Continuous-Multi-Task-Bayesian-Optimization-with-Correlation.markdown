@@ -18,7 +18,9 @@ We consider this problem and show that when given a range of objective functions
 
 We propose the Regional expected Value of Improvement algorithm for this purpose and it looks like this:
 
-![image-title-here]({{site.baseurl}}/assets/img/Pics/REVI/MTKGREVI_sparse-2.gif){:class="img-responsive"}
+<p align="center">
+  <img width="600" height="500" src="{{site.baseurl}}/assets/img/Pics/REVI/MTKGREVI_sparse-2.gif">
+</p>
 
 The horizontal axis is the task parameter $$ i $$, the depth/vertical axis the input for that task $$ x $$, and we aim to find the best input for each task $$ max_x f(i,x) $$, i.e. optimize each vertical slice. Blue points are observed points, the green point is one possible new point whose y value is random, and the black points show the predicted peak of each slice, that will change as a result of the new green addition.
 

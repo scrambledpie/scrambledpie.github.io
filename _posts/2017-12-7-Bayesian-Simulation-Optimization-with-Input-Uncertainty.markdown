@@ -28,13 +28,13 @@ For example, to optimise traffic light timings at a given (real world) road inte
 As a quick refresher, the Expected Improvement acquisition function asks the questions how much will the *observed peak* improve and looks like the following 
 
 <p align="center">
-  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image11.gif">
+  <img width="400" height="200" src="{{site.baseurl}}/assets/img/Pics/IU/image11.gif">
 </p>
 the red point is the height of the largest $$y$$ value found so far, if the data is hypothetically augmented with a new point (just to the right of the current best point) then that new point has some chance of being better or worse than the current best in which case there is an improvement, or it may be worse, in which case there is nothing, the expectation of these outcomes quantifies EI(X).
 
 Knowledge Gradient generalises the EI to noisy functions (since comparing raw $$y$$ values is somewhat meaningless when they are noisy) and it instead asks the question how does the *predicted peak* improve:
 <p align="center">
-  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image14.gif">
+  <img width="400" height="200" src="{{site.baseurl}}/assets/img/Pics/IU/image14.gif">
 </p>
 graphically, the average height of the red point in this second plot shows how much it is worth colecting the white data point whose $$y$$ value is random.
 
