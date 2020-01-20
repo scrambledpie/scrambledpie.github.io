@@ -3,6 +3,7 @@ layout: post
 title:  "Bayesian Optimization Allowing for Common Random Numbers"
 date:   2019-10-21 17:46:02 +0100
 categories: jekyll update
+permalink: /BO-CRN/
 img: Pics/CRN/CRN-ideal.jpg
 paper: https://arxiv.org/abs/1910.09259
 googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DOOtbjJ0AAAAJ%26citation_for_view%3DOOtbjJ0AAAAJ%3AisC4tDSrTZIC%26tzom%3D0

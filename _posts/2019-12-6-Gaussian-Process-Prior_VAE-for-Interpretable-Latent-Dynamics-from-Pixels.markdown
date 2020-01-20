@@ -3,6 +3,7 @@ layout: post
 title:  "Gaussian Process Prior VAE for Interpretable Latent Dynamics from Pixels"
 date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
+permalink: /GP-VAE/
 img: Pics/GPVAE/out.gif # Add image post (optional)
 code: https://github.com/scrambledpie/GPVAE
 paper: https://openreview.net/pdf?id=ryxItJn4FH

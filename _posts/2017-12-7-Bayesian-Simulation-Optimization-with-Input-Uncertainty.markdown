@@ -2,7 +2,7 @@
 layout: post
 title:  "Bayesian Simulation Optimization with Input Uncertainty"
 date:   2017-12-7 17:46:02 +0100
-img: software.jpg # Add image post (optional)
+permalink: /BO-with-IU/
 categories: jekyll update
 img: Pics/IU/image26.gif
 paper: Pics/IU/pearce2017(1).pdf

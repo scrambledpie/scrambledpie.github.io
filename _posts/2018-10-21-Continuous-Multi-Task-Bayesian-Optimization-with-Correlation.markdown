@@ -3,6 +3,7 @@ layout: post
 title:  "Continuous Multi-Task Bayesian Optimization with Correlation"
 date:   2018-10-21 17:46:02 +0100
 categories: jekyll update
+permalink: /REVI/
 img: Pics/REVI/MTKGREVI_sparse-2.gif
 paper: https://www.sciencedirect.com/science/article/abs/pii/S0377221718302261
 code: https://github.com/scrambledpie/Conditional-Multi-Task-BayesOpt
