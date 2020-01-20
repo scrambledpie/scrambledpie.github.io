@@ -2,7 +2,12 @@
 layout: post
 title:  "Bayesian Simulation Optimization with Input Uncertainty"
 date:   2017-12-7 17:46:02 +0100
+img: software.jpg # Add image post (optional)
 categories: jekyll update
+img: Pics/IU/image26.gif
+paper: Pics/IU/pearce2017(1).pdf
+googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DOOtbjJ0AAAAJ%26citation_for_view%3DOOtbjJ0AAAAJ%3ATQgYirikUcIC%26tzom%3D0
+code: https://github.com/scrambledpie/InputUncertainty
 ---
 
 * paper [here][IU_paper]
@@ -23,32 +28,32 @@ For example, to optimise traffic light timings at a given (real world) road inte
 As a quick refresher, the Expected Improvement acquisition function asks the questions how much will the *observed peak* improve and looks like the following 
 
 <p align="center">
-  <img width="600" height="300" src="/Pics/IU/image11.gif">
+  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image11.gif">
 </p>
 the red point is the height of the largest $$y$$ value found so far, if the data is hypothetically augmented with a new point (just to the right of the current best point) then that new point has some chance of being better or worse than the current best in which case there is an improvement, or it may be worse, in which case there is nothing, the expectation of these outcomes quantifies EI(X).
 
 Knowledge Gradient generalises the EI to noisy functions (since comparing raw $$y$$ values is somewhat meaningless when they are noisy) and it instead asks the question how does the *predicted peak* improve:
 <p align="center">
-  <img width="600" height="300" src="/Pics/IU/image14.gif">
+  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image14.gif">
 </p>
 graphically, the average height of the red point in this second plot shows how much it is worth colecting the white data point whose $$y$$ value is random.
 
 Extending both of these approaches to the case of a function averaged over one of it arguments, we first extend the GP to model function over both arguments $$f(x,a)\sim GP(x,a)$$ and this also leads to a GP over the average $$F(x) \sim GP(x)$$. By collecting data $$(x,a)$$ we recieve a new $$y$$ value that will affect
 the predcition of the average $$F(x)$$, this can be seen in the following picture, $$x$$ is horizontal, $$a$$ is depth and $$y$$ is height. The black line is the GP averaged over $$a$$, and the green line is the GP averaged over $$a$$ with one new (random) observation added to the training set. So we can look at the green line and apply Knowledge Gradient or with some approximations expected improvement
 <p align="center">
-  <img width="600" height="500" src="/Pics/IU/image26.gif">
+  <img width="600" height="500" src="{{site.baseurl}}/assets/img/Pics/IU/image26.gif">
 </p>
 
 With these modifications, we can apply these new algorithms to some simple test functions, left is the test function, bottom is the function integrated along the viertical axis with the peak shown. Centre is the GP before at the begining with 10 points, right is the GP after 100 points determined by Expected improvement with input uncertainty. 
 <div class="row">
-    <img src="/Pics/IU/image33.png" style="width:32%">
-    <img src="/Pics/IU/image31.png" style="width:32%">
-    <img src="/Pics/IU/image32.png" style="width:32%">
+    <img src="{{site.baseurl}}/assets/img/Pics/IU/image33.png" style="width:32%">
+    <img src="{{site.baseurl}}/assets/img/Pics/IU/image31.png" style="width:32%">
+    <img src="{{site.baseurl}}/assets/img/Pics/IU/image32.png" style="width:32%">
 </div> 
 
 Finally, plotting the opportunity cost between the best possible $$x^*$$ and the predicted peak $$x = \text{argmax}_x\int_a \mu(x,a)\mathbb{P}[a]da$$ as sampling increases, KG+IU in blue, EI+IU in green and random selected $$(x,a)$$ in pink.
 <p align="center">
-  <img width="600" height="300" src="/Pics/IU/image34.png">
+  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image34.png">
 </p>
 
 On the left we set $$\mathbb{P}[a] = Uniform(0,100)$$ and red is the standard EI applied to the average $$\mathbb{E}[a]=50$$ which fails to converge, it is obviously the wrong tool for the job. Right is where $$\mathbb{E}[a]=Triangular(min=0,max=100,peak=100)$$ which is a wedge shape distribution and the solid red is the mean $$a = 66.6$$ value while dashed red is the mode $$a=100$$ value. Again both methods will not converge.

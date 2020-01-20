@@ -1,0 +1,54 @@
+---
+layout: main
+---
+
+<h1 class="post-list-heading">{{ "Michael Pearce Bayesian Optimisation Blog" }}</h1>
+
+
+<p align="right">
+  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/IU/image11.gif">
+</p>
+
+
+
+I like working on Gaussian processes and optimisation and here you will find a (rough and ready but gradually improving) collection of posts about projects I have worked on!
+
+<h2 class="post-list-heading">{{ "Posts" }}</h2>
+
+{% for post in paginator.posts %}
+<article class="post">
+  {% if post.img %}
+    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
+  {% else %}
+  {% endif %}
+  <div class="post-content">
+    <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{post.title}}</a></h2>
+    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
+
+{% if post.code%}
+	<a href="{{post.code}}" target="_blank">Source code</a>&nbsp;&nbsp;
+  {% else %}
+  {% endif %}
+{% if post.paper%}
+ 	<a href="{{post.paper}}" target="_blank">Paper</a>&nbsp;&nbsp;
+  {% else %}
+  {% endif %}
+{% if post.googlescholar%}
+ 	<a href="{{post.googlescholar}}" target="_blank">Google Scholar</a>&nbsp;&nbsp;
+  {% else %}
+  {% endif %}
+{% if post.bibtex%}
+ 	<a href="{{post.bibtex}}" target="_blank">Bibtex</a>&nbsp;&nbsp;
+  {% else %}
+  {% endif %}
+
+    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+  </div>
+
+</article>
+{% endfor %}
+
+{% include pagination.html %}
+
+

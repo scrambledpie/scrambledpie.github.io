@@ -3,10 +3,12 @@ layout: post
 title:  "Gaussian Process Prior VAE for Interpretable Latent Dynamics from Pixels"
 date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
+img: Pics/GPVAE/out.gif # Add image post (optional)
+code: https://github.com/scrambledpie/GPVAE
+paper: https://openreview.net/pdf?id=ryxItJn4FH
+googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DOOtbjJ0AAAAJ%26citation_for_view%3DOOtbjJ0AAAAJ%3AmB3voiENLucC%26tzom%3D0
 ---
 
-* Source code is available [here][GPVAE_git], 
-* The paper [here][GP_VAE_paper]
 * The poster to be presented at [AABI 2019][AABI_link] is [here][AABI_poster].
 
 ## The Problem
@@ -14,7 +16,7 @@ categories: jekyll update
 Given a set of videos that looks like this:
 
 <p align="center">
-  <img width="600" height="350" src="/Pics/GPVAE/out.gif">
+  <img width="600" height="350" src="{{site.baseurl}}/assets/img/Pics/GPVAE/out.gif">
 </p>
 
 
@@ -40,12 +42,12 @@ Let's assume that the underlying $$(x,y)$$ time series can be modelled by a stan
 Next, take all of the $$x$$ values of the encodings and their time stamps $$(1,\mu_x^*(v_1)),....,(30, \mu_x^*(v_{30}))$$, and simply treat them as points for standard 1D Gaussian process regression over time. This way we get a prediction with uncertainty $$x(t) \sim N( \mu_x(t), \sigma^2_x(t))$$ for any time that includes information from all frames. We do the same for the $$y$$ values too. Below left is a video with frames overlayed and shaded by time, right is the GP regression applied to the time series of encodings.
 
 <p align="center">
-  <img width="600" height="300" src="/Pics/GPVAE/VID_latent.png">
+  <img width="600" height="300" src="{{site.baseurl}}/assets/img/Pics/GPVAE/VID_latent.png">
 </p>
 
 And the Gaussian process for each coordinate looks like
 <p align="center">
-  <img width="650" height="300" src="/Pics/GPVAE/GPR.png">
+  <img width="650" height="300" src="{{site.baseurl}}/assets/img/Pics/GPVAE/GPR.png">
 </p>
 
 
@@ -60,12 +62,12 @@ Finally, we derive the evidence lower bound and train in tensorflow shown below.
 As a simple naive Baseline, we also trained a VAE without any correlation through time, the images are encoded in an i.i.d. fashion, as a result the latent space is rather messy and discontinuous, the top row is input video, middle row is VAE encoded latent $$(x,y)$$ and the bottom row is the GP-VAE encoded $$(x,y)$$
 
 <p align="center">
-  <img width="460" height="480" src="/Pics/GPVAE/vin_VAE_GPVAE.png">
+  <img width="460" height="480" src="{{site.baseurl}}/assets/img/Pics/GPVAE/vin_VAE_GPVAE.png">
 </p>
 
 If we consider a fixed pattern of images, and ask the encoder for an $$(x,y)$$ position in latent space, one would hope that a set of frames where the ball movies smoothly from one side of the screen to another would lead to a continuous set of latent points. However, this continuity from pixels to latents is not preserved by a standrard VAE, but is preserved by the GP-VAE. In the plots below, the lines are only there for visual clarity, we made a specific set of frames and plot the encoded $$(\mu^*_x(v_t), \mu^*_y(v_t))$$ points (above plots show $$(\mu_x(t), \mu_y(t))$$).
 <p align="center">
-  <img width="460" height="322" src="/Pics/GPVAE/circ_grid.png">
+  <img width="460" height="322" src="{{site.baseurl}}/assets/img/Pics/GPVAE/circ_grid.png">
 </p>
 
 Here we present some simple proof-of-concept results and, on this toy application at least, training is easy, yields an interpretable latent space that maps directly to pixel space. Next steps are to use the model on real data and reduce the cubic cost of GP inference for really long time series and evenetually augment an RL agent with the ability to predict physcially plausible latent states with uncertainty from visual input.
@@ -75,5 +77,5 @@ Feel free to play with the code and get in touch! scrambledpie@gmail.com
 
 [GPVAE_git]:https://github.com/scrambledpie/GPVAE
 [GP_VAE_paper]:/Pics/GPVAE/AABI2019_paper.pdf
-[AABI_poster]:/Pics/GPVAE/AABI2019_poster.pdf
+[AABI_poster]:{{site.baseurl}}/assets/img/Pics/GPVAE/AABI2019_poster.pdf
 [AABI_link]:http://approximateinference.org/
