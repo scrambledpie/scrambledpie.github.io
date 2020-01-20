@@ -42,14 +42,11 @@ Twitter: <a href="https://twitter.com/MichaelLeopoldP" target="_blank"> here </a
 Warwick University: <a href="https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/pearce/" target="_blank"> here </a>
 <br>
 <br>
-If you are interested in this website template, it is written using jekyll and hosted on Github pages, 
+This website is written using jekyll and hosted on Github pages, 
 <a href="https://github.com/scrambledpie/scrambledpie.github.io" target="_blank"> source code here</a>.
 The jekyll theme I am using is
 <a href="http://jekyllthemes.org/themes/flexible-jekyll/" target="_blank"> Flexible Jekyll </a> with added links and an about page.
 </p>
-
-If you are interested in this website, it is hosted on Github pages, written using jekyll and the flexible Jekyll theme.
-
 
 <!-- 
 
