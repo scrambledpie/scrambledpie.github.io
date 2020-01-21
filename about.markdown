@@ -7,24 +7,19 @@ permalink: /about/
 
 ![image-title-here]({{site.baseurl}}/assets/img/Pics/mpwarwick-2.jpg){:class="img-responsive"}
 
-My name is Michael Pearce, I have just finished my PhD in Maths at the University of Warwick in the UK.
-My brilliant supervisor is/was [Juergen Branke][JB_website] in Warwick Business School and
-in Septembe<br>r 2019, I submitted my PhD thesis titled "Bayesian Optimisation with Mutli-Task Gaussian Processes".
+My name is Michael Pearce, I have just finished my PhD in Maths at the University of Warwick in the UK, in September 2019, I submitted my PhD thesis titled "<a href="{{site.baseurl}}/assets/img/Pics/thesis(1).pdf" target="_blank">Bayesian Optimisation with Mutli-Task Gaussian Processes</a>". My brilliant supervisor is/was [Juergen Branke][JB_website] in the Operational Research and Management Science group in the Warwick Business School.
 
-My PhD is mostly on extentions of Gaussian process model based optimisation to applications beyond global optmisation. 
-I also spent some time working in Warwick Medical School on Bayesian-Frequentist methods for clinical trials, I did an internship at Google Deepmind combining graphical models and variational autoencoders and most recently at Uber AI focusing on large scale Bayesian optimisation and optimisation over combinatorial domains.
+In my PhD, I focussed on extentions of Gaussian process model based optimisation to applications beyond global optmisation such as Bayesian quadrature optimisation, common random numbers, contextual optimisation and a few others. 
+I also spent some time working in Warwick Medical School on Bayesian-Frequentist methods for clinical trials, I was an intern at Google Deepmind combining graphical models and variational autoencoders and most recently at Uber AI focusing on large scale Bayesian optimisation and optimisation over combinatorial domains. 
 
 
 <!-- Download my thesis [here][MP_thesis] -->
 
 
-
+Feel free to get in touch, 
 
 <p>
 Gmail: scrambledpie  
-<br>
-<br>
-My thesis <a href="{{site.baseurl}}/assets/img/Pics/thesis(1).pdf" target="_blank"> here </a>
 <br>
 <br>
 My academic CV: <a href="https://www.dropbox.com/s/gj0hyzgll7o11ki/MichaelPearceCV.pdf?dl=0" target="_blank"> here </a>
@@ -44,8 +39,8 @@ Warwick University: <a href="https://warwick.ac.uk/fac/cross_fac/complexity/peop
 <br>
 This website is written using jekyll and hosted on Github pages, 
 <a href="https://github.com/scrambledpie/scrambledpie.github.io" target="_blank"> source code here</a>.
-The jekyll theme I am using is
-<a href="http://jekyllthemes.org/themes/flexible-jekyll/" target="_blank"> Flexible Jekyll </a> with added links and an about page.
+The jekyll theme is
+<a href="http://jekyllthemes.org/themes/flexible-jekyll/" target="_blank"> Flexible Jekyll </a> with some minor changes.
 </p>
 
 <!-- 
@@ -73,3 +68,4 @@ Twitter: [here][MP_twitter]
 [MP_warwick]:https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/pearce/
 [MP_twitter]: https://twitter.com/MichaelLeopoldP
 [MP_thesis]:/Pics/thesis(1).pdf -->
+[JB_website]: https://www.wbs.ac.uk/about/person/juergen-branke
