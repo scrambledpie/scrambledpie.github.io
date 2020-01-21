@@ -1,7 +1,7 @@
 title: Michael Pearce Bayes Opt Blog
 description: > # this means to ignore newlines until "baseurl:"
-  Research projects with Bayesian optimization, Bayesian Quadrature, common random numbers,
-  multi-task optimzation.
+  I like working on machine learning models with optimization and here 
+  is a collection my research projects.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http:/bayesianblog.com" # the base hostname & protocol for your site, e.g. http://example.com
