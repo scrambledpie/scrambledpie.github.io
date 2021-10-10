@@ -123,7 +123,7 @@ For more details, please see the [paper][CRN_paper]!
 
 [PWKG_paper]: https://people.orie.cornell.edu/jx66/documents/orKG2.pdf
 [CRN_paper]: https://arxiv.org/abs/1910.09259
-[CRN_git]:   https://github.com/jekyll/jekyll
+[CRN_git]:   https://github.com/scrambledpie/CRN
 
 [MatPol_link]: https://www.linkedin.com/in/mpoloczek/
 [JB_website]: https://www.wbs.ac.uk/about/person/juergen-branke
