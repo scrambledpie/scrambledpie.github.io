@@ -10,7 +10,7 @@ googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=
 code: https://github.com/scrambledpie/CRN
 ---
 
-Source code is soon to follow. This is joint work with [Matthias Poloczek][MatPol_link] from Uber AI and [Juergen Branke][JB_website] of Warwick Business School.
+This is joint work with [Matthias Poloczek][MatPol_link] from Uber AI and [Juergen Branke][JB_website] of Warwick Business School.
 
 Common random numbers (CRN) is a widely used tool in the simulation optimisation, running simulations under different settings however with identical instantiations of randomness. Yet it's use in Bayesian optimisation has been largely neglected.
 
