@@ -7,6 +7,7 @@ permalink: /BO-CRN/
 img: Pics/CRN/CRN-ideal.jpg
 paper: https://arxiv.org/abs/1910.09259
 googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DOOtbjJ0AAAAJ%26citation_for_view%3DOOtbjJ0AAAAJ%3AisC4tDSrTZIC%26tzom%3D0
+code: https://github.com/scrambledpie/CRN
 ---
 
 Source code is soon to follow. This is joint work with [Matthias Poloczek][MatPol_link] from Uber AI and [Juergen Branke][JB_website] of Warwick Business School.
