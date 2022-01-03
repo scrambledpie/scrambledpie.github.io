@@ -10,7 +10,7 @@ paper: https://arxiv.org/pdf/2006.00643.pdf
 googlescholar: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqIcJ6EAAAAJ&alert_preview_top_rm=2&citation_for_view=LqIcJ6EAAAAJ:u5HHmVD_uO8C
 ---
 
-* Juan Ungredda [Scholar][juan_scholar] [Homepage][juan_warwick]
+This is the work of Juan Ungredda [Google Scholar][juan_scholar], [Student Homepage][juan_warwick]
 
 ## Problem Setting
 
