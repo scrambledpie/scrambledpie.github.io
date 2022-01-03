@@ -5,7 +5,7 @@ date:   2021-1-3 17:46:02 +0100
 categories: jekyll update
 permalink: /BICO/
 img: Pics/BICO/BICO-post.png # Add image post (optional)
-code: https://github.com/scrambledpie/GPVAE
+code: https://github.com/JuanUngredda/Input-Uncertainty
 paper: https://arxiv.org/pdf/2006.00643.pdf
 googlescholar: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=LqIcJ6EAAAAJ&alert_preview_top_rm=2&citation_for_view=LqIcJ6EAAAAJ:u5HHmVD_uO8C
 ---

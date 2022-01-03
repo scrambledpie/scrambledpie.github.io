@@ -5,7 +5,7 @@ date:   2019-12-4 17:46:02 +0100
 categories: jekyll update
 permalink: /GP-VAE/
 img: Pics/GPVAE/out.gif # Add image post (optional)
-code: https://github.com/JuanUngredda/Input-Uncertainty
+code: https://github.com/scrambledpie/GPVAE
 paper: https://openreview.net/pdf?id=ryxItJn4FH
 googlescholar: https://scholar.google.co.uk/citations?user=OOtbjJ0AAAAJ&hl=en#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Den%26user%3DOOtbjJ0AAAAJ%26citation_for_view%3DOOtbjJ0AAAAJ%3AmB3voiENLucC%26tzom%3D0
 ---
