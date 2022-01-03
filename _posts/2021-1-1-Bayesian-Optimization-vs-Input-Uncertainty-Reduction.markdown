@@ -21,7 +21,7 @@ Mathematically, we assume the simulator is a simply an expensive black box funct
 _x* = argmax f(x, a*)_
 
 <p align="center">
-  <img width="600" height="350" src="{{site.baseurl}}/assets/img/Pics/BICO/x_a_star.png">
+  <img width="500" height="350" src="{{site.baseurl}}/assets/img/Pics/BICO/x_a_star.png">
 </p>
 
 However there is uncertainty about the true _a*_
@@ -34,13 +34,13 @@ and there is uncertianty about the actual function _f(x, a)_ as modelled by a Ga
 
 
 <p align="center">
-  <img width="600" height="350" src="{{site.baseurl}}/assets/img/Pics/BICO/BICO-post.png">
+  <img width="400" height="350" src="{{site.baseurl}}/assets/img/Pics/BICO/BICO-post.png">
 </p>
 
 We can collect data to learn more about _a*_ by looking at how the distributuion for _a_ would change if we collect more data, one step look ahead
 
 <p align="center">
-  <img width="600" height="350" src="{{site.baseurl}}/assets/img/Pics/BICO/a_collection.png">
+  <img width="600" height="250" src="{{site.baseurl}}/assets/img/Pics/BICO/a_collection.png">
 </p>
 
 or we may evaluate the simulator _f(x, a)_ at a given point _(x, a)_ and update the model of _f(x, a)_
