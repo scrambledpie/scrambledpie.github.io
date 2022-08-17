@@ -1,3 +1,30 @@
+
+# Personal Site Development Environment
+## dockerfile
+```
+FROM ubuntu:latest
+RUN apt update
+RUN apt install ruby-full -y
+RUN apt install build-essential zlib1g-dev -y
+ENV GEM_HOME="$HOME/gems"
+ENV PATH="$HOME/gems/bin:$PATH"
+RUN gem install jekyll bundler
+RUN mkdir /data/
+WORKDIR /data/
+COPY . ./
+RUN bundle install
+ENTRYPOINT bundle exec jekyll serve
+```
+## Docker build and run
+```
+cd scambledpie.github.io
+docker build . -f Dockerfile -t jekyll
+docker run -p 127.0.0.1:4000:4000 -v $PWD/:/data/ -it jekyll
+```
+
+---
+# About the Template
+
 # Flexible-Jekyll is a simple and clean theme for Jekyll
 
 ![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
